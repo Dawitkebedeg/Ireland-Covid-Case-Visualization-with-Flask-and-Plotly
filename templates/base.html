@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> {{ page_title }} </title>
+    <link rel="stylesheet" href="/static/bootstrap.css" />
+    <script src="/static/htmx.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="navbar-brand">
+                <a class="nav-link text-white" href="#">Flask App</a>
+            </div>
+
+            <ul class="navbar-nav bd-navbar-nav flex-row">
+                <li class="nav-item p-3">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item p-3">
+                    <a class="nav-link active" href="{{ url_for('visuals') }}">Visuals</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="card">
+            <div class="card-header">
+                {{ card_title }}
+            </div>
+            <div class="card-body">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="card-footer">
+                Dawit Gebeyehu &copy; 2022
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

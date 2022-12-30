@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{{ card_title }}
+
+{%block content %}
+<a href="static/covid_data.csv">Click here for the complete data</a>
+<table class="table table-striped">
+    <tbody>
+        {{ table_data | safe }}
+    </tbody>
+</table>
+
+
+{% endblock %}

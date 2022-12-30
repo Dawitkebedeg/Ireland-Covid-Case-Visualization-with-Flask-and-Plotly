@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<select
+  class="form-select"
+  name="graph_type"
+  id="graph_type"
+  hx-post="/visuals"
+  hx-target="#the_graph"
+  hx-indicator=".htmx-indicator"
+>
+  <option>Select visualization</option>
+  <option value="confirmed_death">Confirmed Death</option>
+  <option value="case_by_gender">Case by Gender</option>
+  <option value="hospilization_by_age_group">Hospilization by Age Group</option>
+  <option value="covid_cases_by_median_age">Cases by Median Age</option>
+  <option value="icu_hospitalized_ratio">ICU to Hospitalised Ratio</option>
+</select>
+
+<div id="the_graph"></div>
+
+{% endblock %}
